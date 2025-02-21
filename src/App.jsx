@@ -13,34 +13,9 @@ function App() {
   const settings = useStore((state) => state.settings);
   const addNotification = useStore((state) => state.addNotification);
 
-  const handleMount = useCallback(
-    (editor) => {
-      setEditor(editor);
-
-      // Initialize peer connection when editor is mounted
-      if (settings.collaborationEnabled) {
-        peerConnection.init();
-
-        // Handle incoming changes from peers
-        peerConnection.onData((data) => {
-          if (data.type === "drawing-update") {
-            editor.store.mergeRemoteChanges(data.changes);
-          }
-        });
-
-        // Listen to editor changes and broadcast them
-        editor.store.listen((changes) => {
-          if (changes.length > 0) {
-            peerConnection.broadcast({
-              type: "drawing-update",
-              changes,
-            });
-          }
-        });
-      }
-    },
-    [settings.collaborationEnabled],
-  );
+  const handleMount = useCallback((editor) => {
+    setEditor(editor);
+  }, []);
 
   const handleNewDrawing = useCallback(
     (fileName) => {
@@ -82,12 +57,6 @@ function App() {
       return () => clearInterval(interval);
     }
   }, [settings.autoSave, handleSave]);
-
-  useEffect(() => {
-    return () => {
-      peerConnection.disconnect();
-    };
-  }, []);
 
   return (
     <div
