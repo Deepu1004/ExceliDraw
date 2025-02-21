@@ -4,7 +4,6 @@ import "@tldraw/tldraw/tldraw.css";
 import Header from "./components/Header";
 import Notifications from "./components/Notifications";
 import useStore from "./store";
-import { peerConnection } from "./utils/peer";
 
 function App() {
   const [editor, setEditor] = useState(null);
