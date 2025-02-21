@@ -155,11 +155,6 @@ Contributions are welcome! If you find any issues or would like to improve the a
 3. Make your changes.
 4. Submit a pull request.
 
----
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
@@ -167,8 +162,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 For any inquiries or feedback, please contact:
 
-- **Email**: example@domain.com
-- **GitHub**: [@your-username](https://github.com/your-username)
+- **Email**: varanasisaideepak@gmail.com
+- **GitHub**: [@Deepu1004](https://github.com/Deepu1004)
 
 ---
 
