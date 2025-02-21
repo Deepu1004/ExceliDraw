@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.tlui-button {
+  @apply hover:bg-gray-100 transition-colors duration-200;
+}
+
+.dark .tlui-button {
+  @apply hover:bg-gray-700 transition-colors duration-200;
+}
+
+.tlui-menu {
+  @apply shadow-lg border border-gray-200;
+}
+
+.dark .tlui-menu {
+  @apply shadow-lg border-gray-700 bg-gray-800;
+}
+
+.tlui-menu-item {
+  @apply hover:bg-gray-100;
+}
+
+.dark .tlui-menu-item {
+  @apply hover:bg-gray-700 text-gray-300;
+}
+
+.tlui-toolbar {
+  @apply bg-white shadow-md border border-gray-200;
+}
+
+.dark .tlui-toolbar {
+  @apply bg-gray-800 shadow-md border-gray-700;
+}
+
+.dark .tlui-button-grid {
+  @apply bg-gray-800 border-gray-700;
+}
+
+.dark .tlui-button-grid__button {
+  @apply text-gray-300 hover:bg-gray-700;
+}
+
+.dark .tlui-style-panel {
+  @apply bg-gray-800 border-gray-700;
+}
+
+.dark .tlui-style-panel__section {
+  @apply border-gray-700;
+}
+
+.dark .tlui-style-panel__label {
+  @apply text-gray-300;
+}
+
+.dark .tlui-help-menu {
+  @apply bg-gray-800 border-gray-700 text-gray-300;
+}
+
+.dark .tlui-navigation-panel {
+  @apply bg-gray-800 border-gray-700;
+}
